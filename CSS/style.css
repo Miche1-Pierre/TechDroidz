@@ -330,17 +330,34 @@ section {
 
 /* Section Trends */
 .trends {
+    padding: 0 9%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 9%;
     min-height: 100vh;
+}
+
+.trends h2 {
+    position: absolute;
+    bottom: -250px;
+    font-size: var(--font-size-h1);
+}
+
+.trends h2::before {
+    content: '';
+    position: absolute;
+    margin-top: 40px;
+    background-color: var(--color-orange);
+    border-radius: 10px;
+    height: 4px;
+    width: 33%;
 }
 
 .trends .container {
     position: relative;
     display: flex;
     justify-content: center;
+    margin-top: 200px;
 }
 
 .trends .container .box {
@@ -417,7 +434,7 @@ section {
     padding: 20px 40px;
 }
 
-.container .box .content h2 {
+.container .box .content h3 {
     font-size: var(--font-size-h2);
     color: white;
     margin-bottom: 10px;
@@ -555,11 +572,16 @@ section {
     outline: none;
     padding: 10px 20px;
     border-radius: 35px;
+    color: white;
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid 50% rgba(255, 255, 255, 0.2);
     border-left: 1px solid 50% rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login .form .inputBox input::placeholder {
+    color: white;
 }
 
 .login .form .inputBox:nth-child(3) input {
@@ -647,11 +669,16 @@ section {
     outline: none;
     padding: 10px 20px;
     border-radius: 35px;
+    color: white;
     background-color: rgba(255, 255, 255, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid 50% rgba(255, 255, 255, 0.2);
     border-left: 1px solid 50% rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sign .inputBox input::placeholder {
+    color: white;
 }
 
 .sign .inputBox:nth-child(3) input {
@@ -683,7 +710,7 @@ section {
 
 .sign .forget a {
     text-decoration: underline;
-    color: rgba(0, 0, 0, 0.5);
+    color: white;
     font-weight: bold;
     transition: 0.2s;
 }
@@ -695,7 +722,7 @@ section {
 .sign .checkBox p {
     padding-top: 10px;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .sign .checkBox p input {
