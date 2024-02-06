@@ -62,6 +62,8 @@ header {
     width: 100%;
     padding: 2rem 9%;
     background: transparent;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
     z-index: 100;
 }
 
@@ -112,37 +114,43 @@ section {
 .home .scroll .scroll-btn .bx {
     position: absolute;
     margin: auto;
-    color: var(--color-blue);
+    color: var(--color-white);
     font-size: var(--font-size-logo);
     animation: chevron 1.5s infinite ease-in-out;
     border-radius: 5rem;
-    box-shadow: 0px 0px 10px 10px var(--color-blue);
+    box-shadow: 0px 0px 7px 5px var(--color-blue);
 
 }
 
 @keyframes chevron {
     0% {
         transform: translateY(0);
+        box-shadow: 0px 0px 7px 5px var(--color-blue);
     }
 
     50% {
         transform: translateY(-5px);
+        box-shadow: 0px 0px 7px 5px var(--color-orange);
     }
 
     60% {
         transform: translateY(5px);
+        box-shadow: 0px 0px 7px 5px var(--color-orange);
     }
 
     70% {
         transform: translateY(-2px);
+        box-shadow: 0px 0px 7px 5px var(--color-violet);
     }
 
     80% {
         transform: translateY(5px);
+        box-shadow: 0px 0px 7px 5px var(--color-violet);
     }
 
-    100% {
+    70% {
         transform: translateY(0);
+        box-shadow: 0px 0px 7px 5px var(--color-blue);
     }
 }
 
@@ -429,9 +437,10 @@ section {
 }
 
 .container .box .content {
+    height: 100%;
     position: relative;
     z-index: 10;
-    padding: 20px 40px;
+    padding: 50px 40px;
 }
 
 .container .box .content h3 {
@@ -453,20 +462,31 @@ section {
 }
 
 .container .box .content a {
+    position: absolute;
+    bottom: 33px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: var(--font-size-text);
-    color: var(--color-background);
-    background: white;
-    padding: 12px;
-    font-weight: 700;
-    border-radius: 10px;
-    transition: .2s;
+    height: 50px;
+    width: 220px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color: var(--color-white);
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    z-index: 1;
 }
 
 .container .box .content a:hover {
-    background: #081B29;
+    background: var(--color-background);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
     color: white;
 }
 
@@ -836,6 +856,7 @@ section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     animation: cube2 8s ease-in-out infinite;
     z-index: 1;
+    overflow: hidden;
 }
 
 @keyframes cube1 {
@@ -855,14 +876,17 @@ section {
 @keyframes cube2 {
     0% {
         transform: translateY(0px);
+        overflow: hidden;
     }
 
     50% {
         transform: translateY(100px);
+        overflow: hidden;
     }
 
     100% {
         transform: translateY(0px);
+        overflow: hidden;
     }
 }
 
