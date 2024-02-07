@@ -167,19 +167,25 @@ section {
 
 .left .text-animate {
     position: relative;
-    width: 32.8rem;
+    width: 2rem;
+    filter: url(#fire);
 }
 
 .left .text-animate h2 {
-    font-size: var(--font-size-h2);
-    font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: .6px var(--color-blue);
+    margin-top: 50px;
+    position: relative;
+    width: 600px;
+    color: var(--color-blue);
+    font-weight: 600;
+    font-size: 2rem;
+    -webkit-box-reflect: below 20px linear-gradient(transparent, #0001);
+    text-shadow: 0 0 10px var(--color-blue),
+        0 0 40px var(--color-blue);
 }
 
 .left p {
     font-size: var(--font-size-text);
-    margin: 2rem 0 4rem;
+    margin-bottom: 100px;
 }
 
 .btn-container {

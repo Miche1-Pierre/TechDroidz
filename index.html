@@ -35,6 +35,15 @@
                 <div class="text-animate">
                     <h2>The most advanced website for robot engineers !</h2>
                 </div>
+                <svg>
+                    <filter id="fire">
+                        <feTurbulence id="turbulence" baseFrequency="0.1 0.1" numOctaves="2" seed="3">
+                            <animate attributeName="baseFrequency" dur="10s" values="0.1 0.1;0.12 0.2"
+                                repeatCount="indefinite" />
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" scale="2" />
+                    </filter>
+                </svg>
                 <p>Join us in exploring the mysteries of robotics and advanced technologies</p>
 
                 <div class="btn-container">
